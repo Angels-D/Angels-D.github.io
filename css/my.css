@@ -1,0 +1,277 @@
+/* Here is your custom css styles. */
+
+* {
+  cursor: url("../medias/cursor/Arrow.cur"), auto !important;
+}
+
+:active {
+  cursor: url("../medias/cursor/UpArrow.cur"), auto !important;
+}
+
+span,
+span:active,
+.text,
+textarea,
+input,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  cursor: url("../medias/cursor/IBeam.cur"), auto !important;
+}
+
+:any-link,
+button,i {
+  cursor: url("../medias/cursor/Hand.cur"), auto !important;
+}
+
+.bg-color {
+  background: linear-gradient(-45deg, #ee7752, #ce3e75, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 10s ease infinite;
+  -moz-animation: Gradient 10s ease infinite;
+  animation: Gradient 10s ease infinite;
+  -o-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.bg-color:before {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+.btn-large {
+  line-height: 42px !important;
+}
+
+@media only screen and (min-width: 993px) {
+  #he-plugin-simple {
+    z-index: 1;
+    left: 25%;
+    top: 35%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  #he-plugin-simple {
+    display: none;
+  }
+}
+
+.github-badge {
+  display: inline-block;
+  border-radius: 4px;
+  text-shadow: none;
+  font-size: 13px;
+  color: #fff;
+  line-height: 15px;
+  background-color: #abbac3;
+  margin-bottom: 5px;
+}
+
+.github-badge .badge-subject {
+  display: inline-block;
+  background-color: #4d4d4d;
+  padding: 4px 4px 4px 6px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.github-badge .badge-value {
+  display: inline-block;
+  padding: 4px 6px 4px 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.github-badge .bg-brightgreen {
+  background-color: #4dc820 !important;
+}
+
+.github-badge .bg-orange {
+  background-color: #ffa500 !important;
+}
+
+.github-badge .bg-yellow {
+  background-color: #d8b024 !important;
+}
+
+.github-badge .bg-blueviolet {
+  background-color: #8833d7 !important;
+}
+
+.github-badge .bg-pink {
+  background-color: #f26bae !important;
+}
+
+.github-badge .bg-red {
+  background-color: #e05d44 !important;
+}
+
+.github-badge .bg-blue {
+  background-color: #007ec6 !important;
+}
+
+.github-badge .bg-lightgrey {
+  background-color: #9f9f9f !important;
+}
+
+.github-badge .bg-grey,
+.github-badge .bg-gray {
+  background-color: #555 !important;
+}
+
+.github-badge .bg-lightgrey,
+.github-badge .bg-lightgray {
+  background-color: #9f9f9f !important;
+}
+
+/* 深色模式按钮设置 */
+#sma {
+  opacity: 70%;
+  background: #000;
+  width: 48px;
+  height: 48px;
+  display: block;
+  position: fixed;
+  border-radius: 50%;
+  right: 15px;
+  bottom: 157px;
+  padding-top: 15px;
+  margin-bottom: 0;
+  z-index: 998;
+}
+
+#sma .fa-moon-o {
+  position: absolute;
+  right: 11px;
+  bottom: 11px;
+  font-size: 1.8rem !important;
+  cursor: url("../medias/cursor/Hand.cur"), auto!important;
+}
+#sma .fa-lightbulb {
+  position: absolute;
+  right: 15px;
+  bottom: 11px;
+  font-size: 1.8rem !important;
+  cursor: url("../medias/cursor/Hand.cur"), auto!important;
+}
+
+.fa-moon-o:before {
+  content: "\f186";
+}
+.fa-comments:before {
+  content: "\f086";
+}
+
+/* 深色模式设置 */
+/* 字体颜色变灰白色 */
+body.dark .fas,
+body.dark .title,
+body.dark .row .text,
+body.dark article .article-content .summary,
+body.dark .card .card-image .card-title,
+body.dark .fa-moon-o:before,
+body.dark .fa-lightbulb-o:before,
+body.dark article .article-tags .chip,
+body.dark .chip-container .tag-title,
+body.dark div.jqcloud a,
+body.dark .friends-container .tag-title,
+body.dark .frind-ship .title h1,
+body.dark .card .card-content p,
+body.dark .v[data-class="v"] .vcount,
+body.dark .v[data-class="v"] .vcount .vnum,
+body.dark pre code,
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark h5,
+body.dark h6,
+body.dark li,
+body.dark p,
+body.dark header .side-nav .mobile-head .logo-name,
+body.dark header .side-nav .mobile-head .logo-desc,
+body.dark header .side-nav .menu-list a,
+body.dark .bg-cover .post-title,
+body.dark a {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* 背景颜色变灰色 */
+body.dark .card,
+body.dark .block-with-text:after {
+  background-color: #282c34;
+}
+
+/* 背景颜色变黑色 */
+body.dark,
+body.dark .v[data-class="v"] .vcount,
+body.dark #rewardModal .modal-content,
+body.dark .modal,
+body.dark header .side-nav,
+body.dark header .side-nav .menu-list .m-nav-show {
+  background-color: #12121c;
+}
+
+/* 改变透明度 */
+body.dark .aplayer {
+  background: #2f3742 !important;
+}
+body.dark img,
+body.dark strong {
+  filter: brightness(0.7);
+}
+
+#floating-toc-btn{
+  bottom: 215px !important;
+  
+}
+
+#daodream-container .daodream-launcher-enabled {
+  opacity: 70%;
+}
+#daodream-container .daodream-messenger-active .daodream-sheet {
+  opacity: 85%;
+}

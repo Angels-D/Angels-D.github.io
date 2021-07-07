@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Angels-D</title>
+  
+  <subtitle>とても残念だ</subtitle>
+  <link href="hhttp://Angels-D.github.io/atom.xml" rel="self"/>
+  
+  <link href="hhttp://Angels-D.github.io/"/>
+  <updated>2021-07-06T14:14:24.000Z</updated>
+  <id>hhttp://Angels-D.github.io/</id>
+  
+  <author>
+    <name>Angles-D</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>欢迎来到AnglesD的博客</title>
+    <link href="hhttp://Angels-D.github.io/2021/07/06/welcome-to-blog/"/>
+    <id>hhttp://Angels-D.github.io/2021/07/06/welcome-to-blog/</id>
+    <published>2021-07-06T13:56:00.000Z</published>
+    <updated>2021-07-06T14:14:24.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;AnglesD’s-Blog&quot;&gt;&lt;a href=&quot;#AnglesD’s-Blog&quot; class=&quot;headerlink&quot; title=&quot;AnglesD’s Blog&quot;&gt;&lt;/a&gt;AnglesD’s Blog&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="Markdown" scheme="hhttp://Angels-D.github.io/categories/Markdown/"/>
+    
+    
+    <category term="Welcome" scheme="hhttp://Angels-D.github.io/tags/Welcome/"/>
+    
+  </entry>
+  
+</feed>
