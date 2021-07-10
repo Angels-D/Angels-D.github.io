@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Angels-D</title>
+  
+  <subtitle>とても残念だ</subtitle>
+  <link href="http://angels-d.github.io/atom.xml" rel="self"/>
+  
+  <link href="http://angels-d.github.io/"/>
+  <updated>2021-07-10T07:20:41.813Z</updated>
+  <id>http://angels-d.github.io/</id>
+  
+  <author>
+    <name>Angles-D</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>天梯赛-正方形游戏</title>
+    <link href="http://angels-d.github.io/2021/07/10/tian-ti-sai-zheng-fang-xing-you-xi/"/>
+    <id>http://angels-d.github.io/2021/07/10/tian-ti-sai-zheng-fang-xing-you-xi/</id>
+    <published>2021-07-10T07:20:00.000Z</published>
+    <updated>2021-07-10T07:20:41.813Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;天梯赛-正方形游戏&quot;&gt;&lt;a href=&quot;#天梯赛-正方形游戏&quot; class=&quot;headerlink&quot; title=&quot;天梯赛-正方形游戏&quot;&gt;&lt;/a&gt;天梯赛-正方形游戏&lt;/h1&gt;&lt;iframe class=&quot;ppt&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="http://angels-d.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="C++" scheme="http://angels-d.github.io/tags/C/"/>
+    
+    <category term="dfs" scheme="http://angels-d.github.io/tags/dfs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>天梯赛-找密码</title>
+    <link href="http://angels-d.github.io/2021/07/10/tian-ti-sai-zhao-mi-ma/"/>
+    <id>http://angels-d.github.io/2021/07/10/tian-ti-sai-zhao-mi-ma/</id>
+    <published>2021-07-10T07:19:00.000Z</published>
+    <updated>2021-07-10T07:19:27.565Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;天梯赛-找密码&quot;&gt;&lt;a href=&quot;#天梯赛-找密码&quot; class=&quot;headerlink&quot; title=&quot;天梯赛-找密码&quot;&gt;&lt;/a&gt;天梯赛-找密码&lt;/h1&gt;&lt;iframe class=&quot;ppt&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="http://angels-d.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="C++" scheme="http://angels-d.github.io/tags/C/"/>
+    
+    <category term="动态规划" scheme="http://angels-d.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>天梯赛-谁去做这个工作</title>
+    <link href="http://angels-d.github.io/2021/07/10/tian-ti-sai-shui-qu-zuo-zhe-ge-gong-zuo/"/>
+    <id>http://angels-d.github.io/2021/07/10/tian-ti-sai-shui-qu-zuo-zhe-ge-gong-zuo/</id>
+    <published>2021-07-10T07:12:00.000Z</published>
+    <updated>2021-07-10T07:14:55.726Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;天梯赛-谁去做这个工作&quot;&gt;&lt;a href=&quot;#天梯赛-谁去做这个工作&quot; class=&quot;headerlink&quot; title=&quot;天梯赛-谁去做这个工作&quot;&gt;&lt;/a&gt;天梯赛-谁去做这个工作&lt;/h1&gt;&lt;iframe class=&quot;ppt&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="http://angels-d.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="C++" scheme="http://angels-d.github.io/tags/C/"/>
+    
+    <category term="dfs" scheme="http://angels-d.github.io/tags/dfs/"/>
+    
+    <category term="匈牙利算法" scheme="http://angels-d.github.io/tags/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>天梯赛-消消乐(简单)</title>
+    <link href="http://angels-d.github.io/2021/07/10/tian-ti-sai-xiao-xiao-le-jian-dan/"/>
+    <id>http://angels-d.github.io/2021/07/10/tian-ti-sai-xiao-xiao-le-jian-dan/</id>
+    <published>2021-07-10T07:11:00.000Z</published>
+    <updated>2021-07-10T07:15:18.317Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;天梯赛-消消乐-简单&quot;&gt;&lt;a href=&quot;#天梯赛-消消乐-简单&quot; class=&quot;headerlink&quot; title=&quot;天梯赛-消消乐(简单)&quot;&gt;&lt;/a&gt;天梯赛-消消乐(简单)&lt;/h1&gt;&lt;iframe class=&quot;ppt&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="http://angels-d.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="C++" scheme="http://angels-d.github.io/tags/C/"/>
+    
+    <category term="动态规划" scheme="http://angels-d.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>天梯赛-交通运输</title>
+    <link href="http://angels-d.github.io/2021/07/10/tian-ti-sai-jiao-tong-yun-shu/"/>
+    <id>http://angels-d.github.io/2021/07/10/tian-ti-sai-jiao-tong-yun-shu/</id>
+    <published>2021-07-10T07:10:00.000Z</published>
+    <updated>2021-07-10T07:14:27.326Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;天梯赛-交通运输&quot;&gt;&lt;a href=&quot;#天梯赛-交通运输&quot; class=&quot;headerlink&quot; title=&quot;天梯赛-交通运输&quot;&gt;&lt;/a&gt;天梯赛-交通运输&lt;/h1&gt;&lt;iframe class=&quot;ppt&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="http://angels-d.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="C++" scheme="http://angels-d.github.io/tags/C/"/>
+    
+    <category term="并查集" scheme="http://angels-d.github.io/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>天梯赛-摘棉花</title>
+    <link href="http://angels-d.github.io/2021/07/10/tian-ti-sai-zhai-mian-hua/"/>
+    <id>http://angels-d.github.io/2021/07/10/tian-ti-sai-zhai-mian-hua/</id>
+    <published>2021-07-10T06:55:00.000Z</published>
+    <updated>2021-07-10T07:19:13.560Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;天梯赛-摘棉花&quot;&gt;&lt;a href=&quot;#天梯赛-摘棉花&quot; class=&quot;headerlink&quot; title=&quot;天梯赛-摘棉花&quot;&gt;&lt;/a&gt;天梯赛-摘棉花&lt;/h1&gt;&lt;iframe class=&quot;ppt&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="http://angels-d.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="C++" scheme="http://angels-d.github.io/tags/C/"/>
+    
+    <category term="动态规划" scheme="http://angels-d.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>蓝桥杯-皮亚诺曲线</title>
+    <link href="http://angels-d.github.io/2021/07/10/lan-qiao-bei-pi-ya-nuo-qu-xian/"/>
+    <id>http://angels-d.github.io/2021/07/10/lan-qiao-bei-pi-ya-nuo-qu-xian/</id>
+    <published>2021-07-10T06:50:00.000Z</published>
+    <updated>2021-07-10T07:16:12.846Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;蓝桥杯-皮亚诺曲线&quot;&gt;&lt;a href=&quot;#蓝桥杯-皮亚诺曲线&quot; class=&quot;headerlink&quot; title=&quot;蓝桥杯-皮亚诺曲线&quot;&gt;&lt;/a&gt;蓝桥杯-皮亚诺曲线&lt;/h1&gt;&lt;iframe class=&quot;ppt&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="http://angels-d.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="C++" scheme="http://angels-d.github.io/tags/C/"/>
+    
+    <category term="递归" scheme="http://angels-d.github.io/tags/%E9%80%92%E5%BD%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo-theme-matery-s 主题</title>
+    <link href="http://angels-d.github.io/2021/07/09/hexo-theme-matery-s-zhu-ti/"/>
+    <id>http://angels-d.github.io/2021/07/09/hexo-theme-matery-s-zhu-ti/</id>
+    <published>2021-07-09T01:50:00.000Z</published>
+    <updated>2021-07-09T02:15:58.421Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;hexo-theme-matery-s-主题&quot;&gt;&lt;a href=&quot;#hexo-theme-matery-s-主题&quot; class=&quot;headerlink&quot; title=&quot;hexo-theme-matery-s 主题&quot;&gt;&lt;/a&gt;hexo-theme-matery-s</summary>
+        
+      
+    
+    
+    
+    <category term="主题" scheme="http://angels-d.github.io/categories/%E4%B8%BB%E9%A2%98/"/>
+    
+    
+    <category term="Hexo" scheme="http://angels-d.github.io/tags/Hexo/"/>
+    
+    <category term="博客" scheme="http://angels-d.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+    <category term="Matery" scheme="http://angels-d.github.io/tags/Matery/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>校友管理系统（面向对象课程设计）</title>
+    <link href="http://angels-d.github.io/2021/07/08/xiao-you-guan-li-xi-tong-mian-xiang-dui-xiang-ke-cheng-she-ji/"/>
+    <id>http://angels-d.github.io/2021/07/08/xiao-you-guan-li-xi-tong-mian-xiang-dui-xiang-ke-cheng-she-ji/</id>
+    <published>2021-07-08T06:20:00.000Z</published>
+    <updated>2021-07-09T02:15:37.495Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;校友管理系统（面向对象课程设计）&quot;&gt;&lt;a href=&quot;#校友管理系统（面向对象课程设计）&quot; class=&quot;headerlink&quot; title=&quot;校友管理系统（面向对象课程设计）&quot;&gt;&lt;/a&gt;校友管理系统（面向对象课程设计）&lt;/h1&gt;&lt;h2 id=&quot;前-言&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="http://angels-d.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="课程设计" scheme="http://angels-d.github.io/tags/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/"/>
+    
+    <category term="C/C++" scheme="http://angels-d.github.io/tags/C-C/"/>
+    
+    <category term="Qt" scheme="http://angels-d.github.io/tags/Qt/"/>
+    
+    <category term="Mysql" scheme="http://angels-d.github.io/tags/Mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>学生选课系统（C语言课程设计）</title>
+    <link href="http://angels-d.github.io/2021/07/08/xue-sheng-xuan-ke-xi-tong-c-yu-yan-ke-cheng-she-ji/"/>
+    <id>http://angels-d.github.io/2021/07/08/xue-sheng-xuan-ke-xi-tong-c-yu-yan-ke-cheng-she-ji/</id>
+    <published>2021-07-08T04:00:00.000Z</published>
+    <updated>2021-07-09T02:15:26.610Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;学生选课系统（C语言课程设计）&quot;&gt;&lt;a href=&quot;#学生选课系统（C语言课程设计）&quot; class=&quot;headerlink&quot; title=&quot;学生选课系统（C语言课程设计）&quot;&gt;&lt;/a&gt;学生选课系统（C语言课程设计）&lt;/h1&gt;&lt;h2 id=&quot;摘要&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="http://angels-d.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="课程设计" scheme="http://angels-d.github.io/tags/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/"/>
+    
+    <category term="C/C++" scheme="http://angels-d.github.io/tags/C-C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>华为openeuler安装配置</title>
+    <link href="http://angels-d.github.io/2021/07/07/hua-wei-openeuler-an-zhuang-pei-zhi/"/>
+    <id>http://angels-d.github.io/2021/07/07/hua-wei-openeuler-an-zhuang-pei-zhi/</id>
+    <published>2021-07-07T12:04:00.000Z</published>
+    <updated>2021-07-09T02:15:49.241Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;华为openeuler安装配置&quot;&gt;&lt;a href=&quot;#华为openeuler安装配置&quot; class=&quot;headerlink&quot; title=&quot;华为openeuler安装配置&quot;&gt;&lt;/a&gt;华为openeuler安装配置&lt;/h1&gt;&lt;h2 id=&quot;虚拟机&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="操作系统" scheme="http://angels-d.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+    <category term="华为" scheme="http://angels-d.github.io/tags/%E5%8D%8E%E4%B8%BA/"/>
+    
+    <category term="Linux" scheme="http://angels-d.github.io/tags/Linux/"/>
+    
+    <category term="安装" scheme="http://angels-d.github.io/tags/%E5%AE%89%E8%A3%85/"/>
+    
+  </entry>
+  
+</feed>
