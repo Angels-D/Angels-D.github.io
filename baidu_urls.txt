@@ -1,0 +1,16 @@
+https://angels-d.github.io/2021/10/24/nginx-fan-xiang-dai-li/
+https://angels-d.github.io/2021/10/22/hadoop-hdfs/
+https://angels-d.github.io/2021/09/30/suan-fa-yu-shu-ju-jie-gou-bi-ji/
+https://angels-d.github.io/2021/09/24/openeuler-hadoop-an-zhuang-pei-zhi/
+https://angels-d.github.io/2021/08/06/ren-gong-zhi-neng-xue-xi-bi-ji/
+https://angels-d.github.io/2021/07/10/tian-ti-sai-zheng-fang-xing-you-xi/
+https://angels-d.github.io/2021/07/10/tian-ti-sai-zhao-mi-ma/
+https://angels-d.github.io/2021/07/10/tian-ti-sai-shui-qu-zuo-zhe-ge-gong-zuo/
+https://angels-d.github.io/2021/07/10/tian-ti-sai-xiao-xiao-le-jian-dan/
+https://angels-d.github.io/2021/07/10/tian-ti-sai-jiao-tong-yun-shu/
+https://angels-d.github.io/2021/07/10/tian-ti-sai-zhai-mian-hua/
+https://angels-d.github.io/2021/07/10/lan-qiao-bei-pi-ya-nuo-qu-xian/
+https://angels-d.github.io/2021/07/09/hexo-theme-matery-s-zhu-ti/
+https://angels-d.github.io/2021/07/08/xiao-you-guan-li-xi-tong-mian-xiang-dui-xiang-ke-cheng-she-ji/
+https://angels-d.github.io/2021/07/08/xue-sheng-xuan-ke-xi-tong-c-yu-yan-ke-cheng-she-ji/
+https://angels-d.github.io/2021/07/07/hua-wei-openeuler-an-zhuang-pei-zhi/
