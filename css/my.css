@@ -1,0 +1,9 @@
+/* Here is your custom css styles. */
+iframe.ppt {
+  width: 100%;
+  min-height: 25rem;
+}
+
+.mermaid {
+  background: transparent;
+}
