@@ -53,11 +53,11 @@
         </script>
      
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="Angels-D" type="application/atom+xml">
-</head>
+<link rel="alternate" href="/atom.xml" title="Angels-D" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -1143,7 +1143,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2k
+                    1.9k
                 </div>
                 
 
@@ -1197,10 +1197,10 @@
 <p><strong>可用</strong>查看当前空闲空间较多的目录，选择想要作为扩容的挂载点（当前home目录空闲空间较多，可作为hadoop扩容）</p>
 <ol start="3">
 <li><p>关闭hadoop，修改配置文件<strong>hdfs-site.xml</strong>内的<strong>dfs.datanode.data.dir</strong></p>
-<pre class="line-numbers language-xml"><code class="language-xml"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>dfs.datanode.data.dir<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>/home/hadoop_tmp<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
- <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+<pre class="line-numbers language-xml"><code class="language-xml"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>dfs.datanode.data.dir<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">></span></span>/home/hadoop_tmp<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">></span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>添加或修改目录，加入**/home/**下的目录，作为HDFS存储目录</p>
 </li>
@@ -1216,14 +1216,14 @@
 <blockquote>
 <p>两个参数名称中的root代表的是启动hdfs服务的OS用户，应以实际的用户名称代替</p>
 </blockquote>
-<pre class="line-numbers language-xml"><code class="language-xml"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>  
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>hadoop.proxyuser.root.hosts<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>  
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>*<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>  
- <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>  
- <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>  
- <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>hadoop.proxyuser.root.groups<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>  
-   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>*<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>  
- <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+<pre class="line-numbers language-xml"><code class="language-xml"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">></span></span>  
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>hadoop.proxyuser.root.hosts<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>  
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">></span></span>*<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">></span></span>  
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span>  
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">></span></span>  
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>hadoop.proxyuser.root.groups<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>  
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">></span></span>*<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">></span></span>  
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 <li><p>启动/关闭httpfs <code>hdfs --daemon start httpfs</code>，<code>hdfs --daemon stop httpfs</code></p>
@@ -1280,7 +1280,7 @@ fi
 <li><p>提供一个 HDFS 内的文件的路径，对该文件进行创建和删除操作。如果文件所在目录不存在，则自动创建目录</p>
 <pre class="line-numbers language-shell"><code class="language-shell">if $(hdfs dfs -test -d /xxx/xxxx);
 then $(hdfs dfs -touchz /xxx/xxxx/text.txt); 
-else $(hdfs dfs -mkdir -p /xxx/xxxx &amp;&amp; hdfs dfs -touchz /xxx/xxxx/text.txt);
+else $(hdfs dfs -mkdir -p /xxx/xxxx && hdfs dfs -touchz /xxx/xxxx/text.txt);
 fi
 hdfs dfs -rm /xxx/xxxx/text.txt
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
@@ -1296,7 +1296,7 @@ hdfs dfs -rm -R /xxx/xxxx
 hdfs dfs -appendToFile text.txt text.txt
 #文件开头
 hdfs dfs -get text.txt
-cat text.txt &gt;&gt; text1.txt
+cat text.txt >> text1.txt
 hdfs dfs -copyFromLocal -f text.txt text.txt*
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
@@ -1357,20 +1357,20 @@ hdfs dfs -copyFromLocal -f text.txt text.txt*
 <pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">import</span> java<span class="token punctuation">.</span>net<span class="token punctuation">.</span>URI<span class="token punctuation">;</span>
 <span class="token keyword">import</span> org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>hadoop<span class="token punctuation">.</span>conf<span class="token punctuation">.</span>*<span class="token punctuation">;</span>
 <span class="token keyword">import</span> org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>hadoop<span class="token punctuation">.</span>fs<span class="token punctuation">.</span>*<span class="token punctuation">;</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">demo</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">demo</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         FileSystem fs<span class="token punctuation">;</span>
-        <span class="token keyword">try</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
             <span class="token comment" spellcheck="true">// 获取文件系统</span>
             fs <span class="token operator">=</span> FileSystem<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">URI</span><span class="token punctuation">(</span><span class="token string">"hdfs://demo:8020"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">Configuration</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"root"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
             <span class="token comment" spellcheck="true">// 创建文件夹</span>
             Boolean flag <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token function">mkdirs</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Path</span><span class="token punctuation">(</span><span class="token string">"/demotest"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
             System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>flag<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="WebHdfs-和-HttpFS-访问解析"><a href="#WebHdfs-和-HttpFS-访问解析" class="headerlink" title="WebHdfs 和 HttpFS 访问解析"></a>WebHdfs 和 HttpFS 访问解析</h3><blockquote>
 <p>在外网访问WebHdfs会发生一系列问题，使得部分功能不可用</p>
@@ -1396,24 +1396,24 @@ hdfs dfs -copyFromLocal -f text.txt text.txt*
 </blockquote>
 </li>
 <li><p>修改Nginx配置文件 <code>/etc/nginx/nginx.conf</code></p>
-<pre class="line-numbers language-ini"><code class="language-ini">http &amp;#123;
+<pre class="line-numbers language-ini"><code class="language-ini">http {
 #------------------------------#
 #-----------原有的内容-----------#
 #------------------------------#
 
     # 将Hadoop相关服务加入upstream模块
-    upstream Hadoop &amp;#123;
+    upstream Hadoop {
         server c216:9870;
-    &amp;#125;
-    upstream YARN &amp;#123;
+    }
+    upstream YARN {
         server d413:8042;
-    &amp;#125;
-    upstream HttpFS &amp;#123;
+    }
+    upstream HttpFS {
         server c216:14000;
-    &amp;#125;
-    upstream HadoopHistory &amp;#123;
+    }
+    upstream HadoopHistory {
         server c216:19888;
-    &amp;#125;
+    }
 
     #------------------------------#
     #-----------原有的内容-----------#
@@ -1422,8 +1422,8 @@ hdfs dfs -copyFromLocal -f text.txt text.txt*
     # 将Hadoop相关服务加入upstream模块
     # 参考主机、端口见前文
     # 此处配置反代后，相应端口的防火墙和端口映射功能不需要再打开
-    server &amp;#123;
-        location /Hadoop/ &amp;#123;
+    server {
+        location /Hadoop/ {
             proxy_pass http://Hadoop/;
             # 为css,js等文件以替换的方式重定向目录
 <span class="token constant">            sub_filter</span> <span class="token attr-value"><span class="token punctuation">=</span>"/ ="/Hadoop/;</span>
@@ -1435,8 +1435,8 @@ hdfs dfs -copyFromLocal -f text.txt text.txt*
             # htpasswd -c [passwfile] [username]
             auth_basic "请输入密码";
             auth_basic_user_file /usr/share/nginx/htpasswd.users;
-        &amp;#125;
-        location /Hadoop/HttpFS/ &amp;#123;
+        }
+        location /Hadoop/HttpFS/ {
             # 添加替换对象格式（此处主要为了替换json）
             sub_filter_types text/xml application/json application/javascript;
             proxy_pass http://HttpFS/;
@@ -1446,44 +1446,44 @@ hdfs dfs -copyFromLocal -f text.txt text.txt*
             auth_basic_user_file /usr/share/nginx/htpasswd.users;
             # HttpFS需要处理上传下载服务，在此添加响应请求
             proxy_set_header Content-Type application/octet-stream;
-        &amp;#125;
-        location /Hadoop/YARN/ &amp;#123;
+        }
+        location /Hadoop/YARN/ {
             proxy_pass http://d413:8042/;
 <span class="token constant">            sub_filter</span> <span class="token attr-value"><span class="token punctuation">=</span>"/ ="/Hadoop/YARN/;</span>
             sub_filter_once off; 
             auth_basic "请输入密码";
             auth_basic_user_file /usr/share/nginx/htpasswd.users;
-        &amp;#125;
-        location /Hadoop/HadoopHistory/ &amp;#123;
+        }
+        location /Hadoop/HadoopHistory/ {
             proxy_pass http://HadoopHistory/;
 <span class="token constant">            sub_filter</span> <span class="token attr-value"><span class="token punctuation">=</span>"/ ="/Hadoop/HadoopHistory/;</span>
             sub_filter http://d413:8042 /Hadoop/YARN/;
             sub_filter_once off; 
             auth_basic "请输入密码";
             auth_basic_user_file /usr/share/nginx/htpasswd.users;
-        &amp;#125;
+        }
         # 重定向内部指向根目录的链接
         rewrite ^/(jmx|conf|startupProgress)(.*) /Hadoop/$1$2 permanent;
         rewrite ^/(httpfs|HttpFS)(.*) /Hadoop/HttpFS/$1 permanent;
         rewrite ^/jobhistory(.*) /Hadoop/HadoopHistory/jobhistory$1 permanent;
-        location /webhdfs/ &amp;#123;
+        location /webhdfs/ {
             set $flag_url 0;
             # Hadoop中的一些请求本身就可以访问，只需要重定向到自身就行
-            if ( $arg_op ~ 'LISTSTATUS|MKDIRS|DELETE|GET_BLOCK_LOCATIONS') &amp;#123;
+            if ( $arg_op ~ 'LISTSTATUS|MKDIRS|DELETE|GET_BLOCK_LOCATIONS') {
                 rewrite ^/(.*) /Hadoop/$1 permanent;
                 set $flag_url 1;
-            &amp;#125;
+            }
             # WebHdfs无法满足上传下载等请求，在此重定向至HttpFS进行解决
-            if ( $flag_url <span class="token attr-value"><span class="token punctuation">=</span> 0)&amp;#123;</span>
+            if ( $flag_url <span class="token attr-value"><span class="token punctuation">=</span> 0){</span>
                 set $args "$args&amp;user.name<span class="token attr-value"><span class="token punctuation">=</span>root";</span>
                 rewrite ^/(.*) /Hadoop/HttpFS/$1 permanent;
-            &amp;#125;
-        &amp;#125;
-    &amp;#125;
+            }
+        }
+    }
 #------------------------------#
 #-----------原有的内容-----------#
 #------------------------------#
-&amp;#125;
+}
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 <li><p>重启 <strong>Nginx</strong> 即可访问</p>
@@ -2390,7 +2390,7 @@ hdfs dfs -copyFromLocal -f text.txt text.txt*
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">43.3k</span>&nbsp;字
+                class="white-color">35.2k</span>&nbsp;字
             
             
             
@@ -2709,12 +2709,12 @@ $(function () {
     document.body.addEventListener('input', POWERMODE);
   </script>
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true,"react":{"opacity":0.7}}});</script><script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true,"react":{"opacity":0.7}}});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --><script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 preloadRatio: 1,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>

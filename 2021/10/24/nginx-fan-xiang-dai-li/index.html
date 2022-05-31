@@ -53,11 +53,11 @@
         </script>
      
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="Angels-D" type="application/atom+xml">
-</head>
+<link rel="alternate" href="/atom.xml" title="Angels-D" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -1171,14 +1171,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.3k
+                    3.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    20 分
+                    18 分
                 </div>
                 
 
@@ -1270,7 +1270,7 @@
 <pre class="line-numbers language-ini"><code class="language-ini">#------------------------------#
 #-----------原有的内容-----------#
 #------------------------------#
-http &amp;#123;
+http {
 #------------------------------#
 #-----------原有的内容-----------#
 #------------------------------#
@@ -1280,7 +1280,7 @@ http &amp;#123;
     #------------------------------#
     #-----------原有的内容-----------#
     #------------------------------#
-    server &amp;#123;
+    server {
         #------------------------------#
         #-----------原有的内容-----------#
         #------------------------------#
@@ -1289,8 +1289,8 @@ http &amp;#123;
         #------------------------------#
         #-----------原有的内容-----------#
         #------------------------------#
-    &amp;#125;
-&amp;#125;
+    }
+}
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
 <ul>
@@ -1311,21 +1311,21 @@ http &amp;#123;
 <blockquote>
 <p>在此情况下，代理文件的访问路径为Nginx Web根目录</p>
 <p>若想改变路径，则可插入如下内容</p>
-<pre class="line-numbers language-ini"><code class="language-ini">location /XXX/XXX/XXX/XXX/ &amp;#123;
+<pre class="line-numbers language-ini"><code class="language-ini">location /XXX/XXX/XXX/XXX/ {
     root /usr/share/nginx/html;
-&amp;#125;
+}
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>其中<code>/XXX/XXX/XXX/XXX/</code>为访问Nginx Web时的目录</p>
 </blockquote>
 </li>
 <li><p>对于文件目录等本地文件，需要防止自动运行index文件，并配置文件目录格式</p>
 <p>以download目录作为本地文件为例，配置如下</p>
-<pre class="line-numbers language-ini"><code class="language-ini">location /download/&amp;#123;
+<pre class="line-numbers language-ini"><code class="language-ini">location /download/{
     autoindex on;
     autoindex_exact_size off;
     autoindex_localtime on;
     index ...;
-&amp;#125;
+}
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
 <ul>
@@ -1357,13 +1357,13 @@ pid /run/nginx.pid;
 # Load dynamic modules. See /usr/share/doc/nginx/README.dynamic.
 include /usr/share/nginx/modules/*.conf;
 
-events &amp;#123;
+events {
     accept_mutex on;
     multi_accept on;
     worker_connections 1024;
-&amp;#125;
+}
 
-http &amp;#123;
+http {
     log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
                       '$status $body_bytes_sent "$http_referer" '
                       '"$http_user_agent" "$http_x_forwarded_for"';
@@ -1391,46 +1391,46 @@ http &amp;#123;
     # for more information.
     include /etc/nginx/conf.d/*.conf;
 
-    upstream Http &amp;#123;
+    upstream Http {
         server c216:80;
-    &amp;#125;
-    upstream JavaWeb &amp;#123;
+    }
+    upstream JavaWeb {
         server c216:8080;
-    &amp;#125;
-    upstream CodeServer_C216 &amp;#123;
+    }
+    upstream CodeServer_C216 {
         server c216:8888;
-    &amp;#125;
-    upstream CodeServer_D413 &amp;#123;
+    }
+    upstream CodeServer_D413 {
         server D413:8888;
-    &amp;#125;
-    upstream Hadoop &amp;#123;
+    }
+    upstream Hadoop {
         server c216:9870;
-    &amp;#125;
-    upstream YARN &amp;#123;
+    }
+    upstream YARN {
         server d413:8042;
-    &amp;#125;
-    upstream HttpFS &amp;#123;
+    }
+    upstream HttpFS {
         server c216:14000;
-    &amp;#125;
-    upstream HadoopHistory &amp;#123;
+    }
+    upstream HadoopHistory {
         server c216:19888;
-    &amp;#125;
-    upstream HBase &amp;#123;
+    }
+    upstream HBase {
         server c216:16010;
-    &amp;#125;
-    upstream KunpengPortingAdvisor&amp;#123;
+    }
+    upstream KunpengPortingAdvisor{
         server c216:8084;
-    &amp;#125;
-    upstream KunpengHyperTuner&amp;#123;
+    }
+    upstream KunpengHyperTuner{
         server c216:8086;
-    &amp;#125;
-    upstream V2Ray&amp;#123;
+    }
+    upstream V2Ray{
         server d413:11235;
-    &amp;#125;
-    upstream Aria&amp;#123;
+    }
+    upstream Aria{
         server c216:6800;
-    &amp;#125;
-    server &amp;#123;
+    }
+    server {
         listen       443        ssl http2;
         listen       [::]:443   ssl http2;
         server_name_in_redirect off;
@@ -1445,40 +1445,40 @@ http &amp;#123;
         proxy_set_header Connection upgrade;
         absolute_redirect off;
 
-        location /Http/ &amp;#123;
+        location /Http/ {
             proxy_pass http://Http/;
 <span class="token constant">            sub_filter</span> <span class="token attr-value"><span class="token punctuation">=</span>"/ ="/Http/;</span>
             sub_filter_once off;
-        &amp;#125;
-        location /download/&amp;#123;
+        }
+        location /download/{
             autoindex on;
             autoindex_exact_size off;
             autoindex_localtime on;
             index ...;
-        &amp;#125;
-        location /code/&amp;#123;
+        }
+        location /code/{
             autoindex on;
             autoindex_exact_size off;
             autoindex_localtime on;
             index ...;
-        &amp;#125;
-        location /JavaWeb/ &amp;#123;
+        }
+        location /JavaWeb/ {
             proxy_pass http://JavaWeb/;
-        &amp;#125;
-        location /CodeServer_C216/ &amp;#123;
+        }
+        location /CodeServer_C216/ {
             proxy_pass http://CodeServer_C216/;
-        &amp;#125;
-        location /CodeServer_D413/ &amp;#123;
+        }
+        location /CodeServer_D413/ {
             proxy_pass http://CodeServer_D413/;
-        &amp;#125;
-        location /Hadoop/ &amp;#123;
+        }
+        location /Hadoop/ {
             proxy_pass http://Hadoop/;
 <span class="token constant">            sub_filter</span> <span class="token attr-value"><span class="token punctuation">=</span>"/ ="/Hadoop/;</span>
             sub_filter_once off; 
             auth_basic "请输入密码";
             auth_basic_user_file /usr/share/nginx/htpasswd.users;
-        &amp;#125;
-        location /Hadoop/HttpFS/ &amp;#123;
+        }
+        location /Hadoop/HttpFS/ {
             sub_filter_types text/xml application/json application/javascript;
             proxy_pass http://HttpFS/;
             sub_filter http:// /Hadoop/;
@@ -1486,37 +1486,37 @@ http &amp;#123;
             auth_basic "请输入密码";
             auth_basic_user_file /usr/share/nginx/htpasswd.users;
             proxy_set_header Content-Type application/octet-stream;
-        &amp;#125;
-        location /Hadoop/YARN/ &amp;#123;
+        }
+        location /Hadoop/YARN/ {
             proxy_pass http://d413:8042/;
 <span class="token constant">            sub_filter</span> <span class="token attr-value"><span class="token punctuation">=</span>"/ ="/Hadoop/YARN/;</span>
             sub_filter_once off; 
             auth_basic "请输入密码";
             auth_basic_user_file /usr/share/nginx/htpasswd.users;
-        &amp;#125;
-        location /Hadoop/HadoopHistory/ &amp;#123;
+        }
+        location /Hadoop/HadoopHistory/ {
             proxy_pass http://HadoopHistory/;
 <span class="token constant">            sub_filter</span> <span class="token attr-value"><span class="token punctuation">=</span>"/ ="/Hadoop/HadoopHistory/;</span>
             sub_filter http://d413:8042 /Hadoop/YARN/;
             sub_filter_once off; 
             auth_basic "请输入密码";
             auth_basic_user_file /usr/share/nginx/htpasswd.users;
-        &amp;#125;
-        location /Hadoop/HBase/ &amp;#123;  
+        }
+        location /Hadoop/HBase/ {  
             proxy_set_header Accept-Encoding "";
             proxy_pass http://HBase/;
 <span class="token constant">            sub_filter</span> <span class="token attr-value"><span class="token punctuation">=</span>"/ ="/Hadoop/HBase/;</span>
             sub_filter_once off;
             auth_basic "请输入密码";
             auth_basic_user_file /usr/share/nginx/htpasswd.users;
-        &amp;#125;
-        location /KunpengPortingAdvisor/ &amp;#123;
+        }
+        location /KunpengPortingAdvisor/ {
             proxy_pass https://KunpengPortingAdvisor/;
-        &amp;#125;
-        location /KunpengHyperTuner/ &amp;#123;
+        }
+        location /KunpengHyperTuner/ {
             proxy_pass https://KunpengHyperTuner/;
-        &amp;#125;
-        location /V2Ray &amp;#123;
+        }
+        location /V2Ray {
             proxy_pass http://V2Ray;
             proxy_redirect off;
             proxy_set_header Host $host;
@@ -1525,10 +1525,10 @@ http &amp;#123;
             proxy_http_version 1.1;
             proxy_set_header Upgrade $http_upgrade;
             proxy_set_header Connection upgrade;
-        &amp;#125;
-        location /Aria/ &amp;#123;
+        }
+        location /Aria/ {
             proxy_pass https://Aria/;
-        &amp;#125;
+        }
         rewrite ^/(jmx|conf|startupProgress)(.*) /Hadoop/$1$2 permanent;
         rewrite ^/(httpfs|HttpFS)(.*) /Hadoop/HttpFS/$1 permanent;
         rewrite ^/jobhistory(.*) /Hadoop/HadoopHistory/jobhistory$1 permanent;
@@ -1536,25 +1536,25 @@ http &amp;#123;
         rewrite ^/porting(.*) /KunpengPortingAdvisor/porting$1 permanent;
         rewrite ^/user-management(.*) /KunpengHyperTuner/user-management$1 permanent;
         rewrite ^/(sys|java)-perf(.*) /KunpengHyperTuner/$1-perf$2 permanent;
-        location /webhdfs/ &amp;#123;
+        location /webhdfs/ {
             set $flag_url 0;
-            if ( $arg_op ~ 'LISTSTATUS|MKDIRS|DELETE|GET_BLOCK_LOCATIONS') &amp;#123;
+            if ( $arg_op ~ 'LISTSTATUS|MKDIRS|DELETE|GET_BLOCK_LOCATIONS') {
                 rewrite ^/(.*) /Hadoop/$1 permanent;
                 set $flag_url 1;
-            &amp;#125;
-            if ( $flag_url <span class="token attr-value"><span class="token punctuation">=</span> 0)&amp;#123;</span>
+            }
+            if ( $flag_url <span class="token attr-value"><span class="token punctuation">=</span> 0){</span>
                 set $args "$args&amp;user.name<span class="token attr-value"><span class="token punctuation">=</span>root";</span>
                 rewrite ^/(.*) /Hadoop/HttpFS/$1 permanent;
-            &amp;#125;
-        &amp;#125;
+            }
+        }
         error_page 404 /404.html;
-<span class="token constant">            location</span> <span class="token attr-value"><span class="token punctuation">=</span> /40x.html &amp;#123;</span>
-        &amp;#125;
+<span class="token constant">            location</span> <span class="token attr-value"><span class="token punctuation">=</span> /40x.html {</span>
+        }
         error_page 500 502 503 504 /50x.html;
-<span class="token constant">            location</span> <span class="token attr-value"><span class="token punctuation">=</span> /50x.html &amp;#123;</span>
-        &amp;#125;
-    &amp;#125;
-&amp;#125;
+<span class="token constant">            location</span> <span class="token attr-value"><span class="token punctuation">=</span> /50x.html {</span>
+        }
+    }
+}
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="Aria"><a href="#Aria" class="headerlink" title="Aria"></a>Aria</h3><blockquote>
 <p>Aria是一款支持BT及磁力下载的免费软件</p>
@@ -1580,28 +1580,28 @@ http &amp;#123;
 <pre class="line-numbers language-ini"><code class="language-ini">#------------------------------#
 #-----------原有的内容-----------#
 #------------------------------#
-http &amp;#123;
+http {
 #------------------------------#
 #-----------原有的内容-----------#
 #------------------------------#
-    upstream Aria&amp;#123;
+    upstream Aria{
         server c216:6800;
-    &amp;#125;
+    }
     #------------------------------#
     #-----------原有的内容-----------#
     #------------------------------#
-    server &amp;#123;
+    server {
         #------------------------------#
         #-----------原有的内容-----------#
         #------------------------------#
-        location /Aria/ &amp;#123;
+        location /Aria/ {
             proxy_pass https://Aria/;
-        &amp;#125;
+        }
         #------------------------------#
         #-----------原有的内容-----------#
         #------------------------------#
-    &amp;#125;
-&amp;#125;
+    }
+}
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
 <ul>
@@ -1622,13 +1622,13 @@ http &amp;#123;
 <li><p>启动Java Web，本文使用Tomcat的地址为：c216:8080</p>
 </li>
 <li><p>将Java Web加入到Nginx中，配置同Aria，部分修改如下</p>
-<pre class="line-numbers language-ini"><code class="language-ini">upstream JavaWeb &amp;#123;
+<pre class="line-numbers language-ini"><code class="language-ini">upstream JavaWeb {
     server c216:8080;
-&amp;#125;
+}
 
-location /JavaWeb/ &amp;#123;
+location /JavaWeb/ {
     proxy_pass http://JavaWeb/;
-&amp;#125;
+}
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 </ol>
@@ -1642,24 +1642,24 @@ location /JavaWeb/ &amp;#123;
 <p>本文安装其中的代码迁移工具（端口8084）和性能分析工具（端口8086）</p>
 </li>
 <li><p>将开发者套件加入到Nginx中，配置同Aria，部分修改如下</p>
-<pre class="line-numbers language-ini"><code class="language-ini">upstream KunpengPortingAdvisor&amp;#123;
+<pre class="line-numbers language-ini"><code class="language-ini">upstream KunpengPortingAdvisor{
     server c216:8084;
-&amp;#125;
-upstream KunpengHyperTuner&amp;#123;
+}
+upstream KunpengHyperTuner{
     server c216:8086;
-&amp;#125;
+}
 
-location /KunpengPortingAdvisor/ &amp;#123;
+location /KunpengPortingAdvisor/ {
     proxy_pass https://KunpengPortingAdvisor/;
-&amp;#125;
-location /KunpengHyperTuner/ &amp;#123;
+}
+location /KunpengHyperTuner/ {
     proxy_pass https://KunpengHyperTuner/;
-&amp;#125;
+}
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 <li><p>同前文进行配置后，由于代理服务不在根目录，会发现网页跳转产生问题，此时需要重定向代理链接</p>
 <p>配置如下</p>
-<pre class="line-numbers language-ini"><code class="language-ini">server &amp;#123;
+<pre class="line-numbers language-ini"><code class="language-ini">server {
     #------------------------------#
     #-----------原有的内容-----------#
     #------------------------------#
@@ -1668,7 +1668,7 @@ location /KunpengHyperTuner/ &amp;#123;
     #------------------------------#
     #-----------原有的内容-----------#
     #------------------------------#
-&amp;#125;
+}
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
 <ul>
@@ -1693,25 +1693,25 @@ location /KunpengHyperTuner/ &amp;#123;
 </blockquote>
 </li>
 <li><p>将CodeServer加入到Nginx中，配置同Aria，部分修改如下</p>
-<pre class="line-numbers language-ini"><code class="language-ini">upstream CodeServer_C216 &amp;#123;
+<pre class="line-numbers language-ini"><code class="language-ini">upstream CodeServer_C216 {
     server c216:8888;
-&amp;#125;
-upstream CodeServer_D413 &amp;#123;
+}
+upstream CodeServer_D413 {
     server D413:8888;
-&amp;#125;
+}
 
-location /CodeServer_C216/ &amp;#123;
+location /CodeServer_C216/ {
     proxy_pass http://CodeServer_C216/;
-&amp;#125;
-location /CodeServer_D413/ &amp;#123;
+}
+location /CodeServer_D413/ {
     proxy_pass http://CodeServer_D413/;
-&amp;#125;
+}
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 <li><p>此时通过Nginx访问CodeServer提示错误</p>
 <p><strong>The workbench failed to connect to the server (Error: WebSocket close with status code 1006)</strong></p>
 <p>配置文件补充内容如下</p>
-<pre class="line-numbers language-ini"><code class="language-ini">server &amp;#123;
+<pre class="line-numbers language-ini"><code class="language-ini">server {
     #------------------------------#
     #-----------原有的内容-----------#
     #------------------------------#
@@ -1719,7 +1719,7 @@ location /CodeServer_D413/ &amp;#123;
     #------------------------------#
     #-----------原有的内容-----------#
     #------------------------------#
-&amp;#125;
+}
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
 <ul>
@@ -1737,23 +1737,23 @@ location /CodeServer_D413/ &amp;#123;
 <p>教程参考：<a href="https://angels-d.github.io/2021/09/24/openeuler-hadoop-an-zhuang-pei-zhi/">OpenEuler-Hadoop安装配置 | Angels-D</a>，<a href="https://angels-d.github.io/2021/10/22/hadoop-hdfs/#toc-heading-6">Hadoop-Hdfs | Angels-D</a></p>
 </li>
 <li><p>将Hadoop加入到Nginx中，并处理链接重定向问题，内容如下(此时内容不为最终版，可先不输入)：</p>
-<pre class="line-numbers language-ini"><code class="language-ini">upstream Hadoop &amp;#123;
+<pre class="line-numbers language-ini"><code class="language-ini">upstream Hadoop {
     server c216:9870;
-&amp;#125;
-upstream HadoopHistory &amp;#123;
+}
+upstream HadoopHistory {
     server c216:19888;
-&amp;#125;
+}
 
-location /Hadoop/ &amp;#123;
+location /Hadoop/ {
     proxy_pass http://Hadoop/;
     auth_basic "请输入密码";
     auth_basic_user_file /usr/share/nginx/htpasswd.users;
-&amp;#125;
-location /Hadoop/HadoopHistory/ &amp;#123;
+}
+location /Hadoop/HadoopHistory/ {
     proxy_pass http://HadoopHistory/;
     auth_basic "请输入密码";
     auth_basic_user_file /usr/share/nginx/htpasswd.users;
-&amp;#125;
+}
 
 rewrite ^/(jmx|conf|startupProgress)(.*) /Hadoop/$1$2 permanent;
 rewrite ^/jobhistory(.*) /Hadoop/HadoopHistory/jobhistory$1 permanent;
@@ -1781,27 +1781,27 @@ rewrite ^/jobhistory(.*) /Hadoop/HadoopHistory/jobhistory$1 permanent;
 </li>
 <li><p>此时，发现部分static等其他文件无法访问，同样是指向根目录问题</p>
 <p>由于不同服务的指向不同，不能统一使用rewrite定向，遂使用其他办法(此时内容不为最终版，可先不输入)：</p>
-<pre class="line-numbers language-ini"><code class="language-ini">upstream Hadoop &amp;#123;
+<pre class="line-numbers language-ini"><code class="language-ini">upstream Hadoop {
     server c216:9870;
-&amp;#125;
-upstream HadoopHistory &amp;#123;
+}
+upstream HadoopHistory {
     server c216:19888;
-&amp;#125;
+}
 
-location /Hadoop/ &amp;#123;
+location /Hadoop/ {
     proxy_pass http://Hadoop/;
 <span class="token constant">    sub_filter</span> <span class="token attr-value"><span class="token punctuation">=</span>"/ ="/Hadoop/;</span>
     sub_filter_once off; 
     auth_basic "请输入密码";
     auth_basic_user_file /usr/share/nginx/htpasswd.users;
-&amp;#125;
-location /Hadoop/HadoopHistory/ &amp;#123;
+}
+location /Hadoop/HadoopHistory/ {
     proxy_pass http://HadoopHistory/;
 <span class="token constant">    sub_filter</span> <span class="token attr-value"><span class="token punctuation">=</span>"/ ="/Hadoop/HadoopHistory/;</span>
     sub_filter_once off; 
     auth_basic "请输入密码";
     auth_basic_user_file /usr/share/nginx/htpasswd.users;
-&amp;#125;
+}
 
 rewrite ^/(jmx|conf|startupProgress)(.*) /Hadoop/$1$2 permanent;
 rewrite ^/jobhistory(.*) /Hadoop/HadoopHistory/jobhistory$1 permanent;
@@ -1819,38 +1819,38 @@ rewrite ^/jobhistory(.*) /Hadoop/HadoopHistory/jobhistory$1 permanent;
 </blockquote>
 </li>
 <li><p>重新设置后，发现部分网页无法访问，是由于YARN代理未开，处理如下(此时内容不为最终版，可先不输入)：</p>
-<pre class="line-numbers language-ini"><code class="language-ini">upstream Hadoop &amp;#123;
+<pre class="line-numbers language-ini"><code class="language-ini">upstream Hadoop {
     server c216:9870;
-&amp;#125;
-upstream YARN &amp;#123;
+}
+upstream YARN {
     server d413:8042;
-&amp;#125;
-upstream HadoopHistory &amp;#123;
+}
+upstream HadoopHistory {
     server c216:19888;
-&amp;#125;
+}
 
-location /Hadoop/ &amp;#123;
+location /Hadoop/ {
     proxy_pass http://Hadoop/;
 <span class="token constant">    sub_filter</span> <span class="token attr-value"><span class="token punctuation">=</span>"/ ="/Hadoop/;</span>
     sub_filter_once off; 
     auth_basic "请输入密码";
     auth_basic_user_file /usr/share/nginx/htpasswd.users;
-&amp;#125;
-location /Hadoop/YARN/ &amp;#123;
+}
+location /Hadoop/YARN/ {
     proxy_pass http://d413:8042/;
 <span class="token constant">    sub_filter</span> <span class="token attr-value"><span class="token punctuation">=</span>"/ ="/Hadoop/YARN/;</span>
     sub_filter_once off; 
     auth_basic "请输入密码";
     auth_basic_user_file /usr/share/nginx/htpasswd.users;
-&amp;#125;
-location /Hadoop/HadoopHistory/ &amp;#123;
+}
+location /Hadoop/HadoopHistory/ {
     proxy_pass http://HadoopHistory/;
 <span class="token constant">    sub_filter</span> <span class="token attr-value"><span class="token punctuation">=</span>"/ ="/Hadoop/HadoopHistory/;</span>
     sub_filter http://d413:8042 /Hadoop/YARN/;
     sub_filter_once off; 
     auth_basic "请输入密码";
     auth_basic_user_file /usr/share/nginx/htpasswd.users;
-&amp;#125;
+}
 
 rewrite ^/(jmx|conf|startupProgress)(.*) /Hadoop/$1$2 permanent;
 rewrite ^/jobhistory(.*) /Hadoop/HadoopHistory/jobhistory$1 permanent;
@@ -1859,27 +1859,27 @@ rewrite ^/jobhistory(.*) /Hadoop/HadoopHistory/jobhistory$1 permanent;
 <li><p>尝试Hadoop的HDFS功能，发现部分上传、下载功能无法使用</p>
 <p>Hadoop Web端默认使用webhdfs处理，而经过Nginx代理后出现问题，此时需要将webhdfs的部分功能转交给httpfs实现</p>
 <p>最终Hadoop配置如下：</p>
-<pre class="line-numbers language-ini"><code class="language-ini">upstream Hadoop &amp;#123;
+<pre class="line-numbers language-ini"><code class="language-ini">upstream Hadoop {
     server c216:9870;
-&amp;#125;
-upstream YARN &amp;#123;
+}
+upstream YARN {
     server d413:8042;
-&amp;#125;
-upstream HttpFS &amp;#123;
+}
+upstream HttpFS {
     server c216:14000;
-&amp;#125;
-upstream HadoopHistory &amp;#123;
+}
+upstream HadoopHistory {
     server c216:19888;
-&amp;#125;
+}
 
-location /Hadoop/ &amp;#123;
+location /Hadoop/ {
     proxy_pass http://Hadoop/;
 <span class="token constant">    sub_filter</span> <span class="token attr-value"><span class="token punctuation">=</span>"/ ="/Hadoop/;</span>
     sub_filter_once off; 
     auth_basic "请输入密码";
     auth_basic_user_file /usr/share/nginx/htpasswd.users;
-&amp;#125;
-location /Hadoop/HttpFS/ &amp;#123;
+}
+location /Hadoop/HttpFS/ {
     sub_filter_types text/xml application/json application/javascript;
     proxy_pass http://HttpFS/;
     sub_filter http:// /Hadoop/;
@@ -1887,33 +1887,33 @@ location /Hadoop/HttpFS/ &amp;#123;
     auth_basic "请输入密码";
     auth_basic_user_file /usr/share/nginx/htpasswd.users;
     proxy_set_header Content-Type application/octet-stream;
-&amp;#125;
-location /Hadoop/YARN/ &amp;#123;
+}
+location /Hadoop/YARN/ {
     proxy_pass http://d413:8042/;
 <span class="token constant">    sub_filter</span> <span class="token attr-value"><span class="token punctuation">=</span>"/ ="/Hadoop/YARN/;</span>
     sub_filter_once off; 
     auth_basic "请输入密码";
     auth_basic_user_file /usr/share/nginx/htpasswd.users;
-&amp;#125;
-location /Hadoop/HadoopHistory/ &amp;#123;
+}
+location /Hadoop/HadoopHistory/ {
     proxy_pass http://HadoopHistory/;
 <span class="token constant">    sub_filter</span> <span class="token attr-value"><span class="token punctuation">=</span>"/ ="/Hadoop/HadoopHistory/;</span>
     sub_filter http://d413:8042 /Hadoop/YARN/;
     sub_filter_once off; 
     auth_basic "请输入密码";
     auth_basic_user_file /usr/share/nginx/htpasswd.users;
-&amp;#125;
-location /webhdfs/ &amp;#123;
+}
+location /webhdfs/ {
     set $flag_url 0;
-    if ( $arg_op ~ 'LISTSTATUS|MKDIRS|DELETE|GET_BLOCK_LOCATIONS') &amp;#123;
+    if ( $arg_op ~ 'LISTSTATUS|MKDIRS|DELETE|GET_BLOCK_LOCATIONS') {
         rewrite ^/(.*) /Hadoop/$1 permanent;
         set $flag_url 1;
-    &amp;#125;
-    if ( $flag_url <span class="token attr-value"><span class="token punctuation">=</span> 0)&amp;#123;</span>
+    }
+    if ( $flag_url <span class="token attr-value"><span class="token punctuation">=</span> 0){</span>
         set $args "$args&amp;user.name<span class="token attr-value"><span class="token punctuation">=</span>root";</span>
         rewrite ^/(.*) /Hadoop/HttpFS/$1 permanent;
-    &amp;#125;
-&amp;#125;
+    }
+}
 
 rewrite ^/(jmx|conf|startupProgress)(.*) /Hadoop/$1$2 permanent;
 rewrite ^/(httpfs|HttpFS)(.*) /Hadoop/HttpFS/$1 permanent;
@@ -1932,40 +1932,40 @@ rewrite ^/jobhistory(.*) /Hadoop/HadoopHistory/jobhistory$1 permanent;
 <li><p>安装配置V2Ray</p>
 <p>一键安装脚本：<code>bash &lt;(curl -s -L https://git.io/v2ray.sh)</code></p>
 <p>安装后修改配置文件<code>vi /etc/v2ray/config.json</code></p>
-<pre class="line-numbers language-json"><code class="language-json">&amp;#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token property">"log"</span><span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
+<pre class="line-numbers language-json"><code class="language-json"><span class="token punctuation">{</span>
+    <span class="token property">"log"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
         <span class="token property">"access"</span><span class="token operator">:</span> <span class="token string">"/var/log/v2ray/access.log"</span><span class="token punctuation">,</span>
         <span class="token property">"error"</span><span class="token operator">:</span> <span class="token string">"/var/log/v2ray/error.log"</span><span class="token punctuation">,</span>
         <span class="token property">"loglevel"</span><span class="token operator">:</span> <span class="token string">"warning"</span>
-    &amp;#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
     <span class="token property">"inbounds"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-        &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token punctuation">{</span>
             <span class="token property">"port"</span><span class="token operator">:</span> <span class="token number">11235</span><span class="token punctuation">,</span>
             <span class="token property">"protocol"</span><span class="token operator">:</span> <span class="token string">"vmess"</span><span class="token punctuation">,</span>
-            <span class="token property">"settings"</span><span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token property">"settings"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
                 <span class="token property">"clients"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-                    &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">{</span>
                         <span class="token property">"id"</span><span class="token operator">:</span> <span class="token string">"？？？？？？？？？？？？？？？？？"</span><span class="token punctuation">,</span>
                         <span class="token property">"level"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
                         <span class="token property">"alterId"</span><span class="token operator">:</span> <span class="token number">0</span>
-                    &amp;#<span class="token number">125</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
                 <span class="token punctuation">]</span>
-            &amp;#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-            <span class="token property">"streamSettings"</span><span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">"streamSettings"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
                 <span class="token property">"network"</span><span class="token operator">:</span> <span class="token string">"ws"</span><span class="token punctuation">,</span>
-                <span class="token property">"wsSettings"</span><span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
+                <span class="token property">"wsSettings"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
                     <span class="token property">"connectionReuse"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
                     <span class="token property">"path"</span><span class="token operator">:</span> <span class="token string">"/V2Ray"</span>
-                &amp;#<span class="token number">125</span><span class="token punctuation">;</span>
-            &amp;#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-            <span class="token property">"sniffing"</span><span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">"sniffing"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
                 <span class="token property">"enabled"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
                 <span class="token property">"destOverride"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
                     <span class="token string">"http"</span><span class="token punctuation">,</span>
                     <span class="token string">"tls"</span>
                 <span class="token punctuation">]</span>
-            &amp;#<span class="token number">125</span><span class="token punctuation">;</span>
-        &amp;#<span class="token number">125</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
 /*------------------------------*/
 /*-----------原有的内容-----------*/
 /*------------------------------*/
@@ -1982,11 +1982,11 @@ rewrite ^/jobhistory(.*) /Hadoop/HadoopHistory/jobhistory$1 permanent;
 </blockquote>
 </li>
 <li><p>将Hadoop加入到Nginx中：</p>
-<pre class="line-numbers language-ini"><code class="language-ini">upstream V2Ray&amp;#123;
+<pre class="line-numbers language-ini"><code class="language-ini">upstream V2Ray{
     server d413:11235;
-&amp;#125;
+}
     
-location /V2Ray &amp;#123;
+location /V2Ray {
     proxy_pass http://V2Ray;
     proxy_redirect off;
     proxy_set_header Host $host;
@@ -1995,7 +1995,7 @@ location /V2Ray &amp;#123;
     proxy_http_version 1.1;
     proxy_set_header Upgrade $http_upgrade;
     proxy_set_header Connection upgrade;
-&amp;#125;
+}
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 </ol>
@@ -2568,84 +2568,46 @@ auth_pass = 访问密码
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/10/24/nginx-fan-xiang-dai-li/">
+                <a href="/2022/05/31/kun-peng-ji-suan-shi-yong-ti-yan-zong-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/loading.gif" data-original="https://fastly.jsdelivr.net/gh/Angels-D/Angels-D.github.io/medias/featureimages/19.jpg" class="responsive-img" alt="Nginx代理">
+                        <img src="/medias/loading.gif" data-original="https://fastly.jsdelivr.net/gh/Angels-D/Angels-D.github.io/medias/featureimages/5.jpg" class="responsive-img" alt="鲲鹏计算使用体验">
                         
-                        <span class="card-title">Nginx代理</span>
+                        <span class="card-title">鲲鹏计算使用体验</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            使用Nginx搭建Web服务器，并反向代理Web项目
+                            本文主要基于TaiShan 200 (Model 2280)服务器、弹性云服务器ECS、虚拟机(Hyper-V/VMware)对OpenEuler、OpenGauss体验使用。
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-24
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-31
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%BD%91%E7%BB%9C/" class="post-category">
-                                    网络
+                            <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="post-category">
+                                    操作系统
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Linux/">
-                        <span class="chip bg-color">Linux</span>
-                    </a>
-                    
-                    <a href="/tags/Hadoop/">
-                        <span class="chip bg-color">Hadoop</span>
-                    </a>
-                    
-                    <a href="/tags/CodeServer/">
-                        <span class="chip bg-color">CodeServer</span>
-                    </a>
-                    
-                    <a href="/tags/Aria/">
-                        <span class="chip bg-color">Aria</span>
-                    </a>
-                    
-                    <a href="/tags/V2Ray/">
-                        <span class="chip bg-color">V2Ray</span>
-                    </a>
-                    
-                    <a href="/tags/JavaWeb/">
-                        <span class="chip bg-color">JavaWeb</span>
-                    </a>
-                    
-                    <a href="/tags/%E9%B2%B2%E9%B9%8F%E5%BC%80%E5%8F%91%E8%80%85%E5%A5%97%E4%BB%B6/">
-                        <span class="chip bg-color">鲲鹏开发者套件</span>
-                    </a>
-                    
-                    <a href="/tags/Nginx/">
-                        <span class="chip bg-color">Nginx</span>
-                    </a>
-                    
-                    <a href="/tags/ssl/">
-                        <span class="chip bg-color">ssl</span>
-                    </a>
-                    
-                    <a href="/tags/%E7%AB%AF%E5%8F%A3%E6%98%A0%E5%B0%84/">
-                        <span class="chip bg-color">端口映射</span>
+                    <a href="/tags/%E5%B0%8F%E6%A0%87%E7%AD%BE-%E5%8D%8E%E4%B8%BA-Linux-%E5%AE%89%E8%A3%85-%E6%95%B0%E6%8D%AE%E5%BA%93-%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+                        <span class="chip bg-color">小标签 - 华为 - Linux - 安装 - 数据库 - 服务器</span>
                     </a>
                     
                 </div>
@@ -2972,7 +2934,7 @@ auth_pass = 访问密码
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">43.3k</span>&nbsp;字
+                class="white-color">35.2k</span>&nbsp;字
             
             
             
@@ -3291,12 +3253,12 @@ $(function () {
     document.body.addEventListener('input', POWERMODE);
   </script>
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true,"react":{"opacity":0.7}}});</script><script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true,"react":{"opacity":0.7}}});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --><script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 preloadRatio: 1,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>
