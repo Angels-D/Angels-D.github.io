@@ -55,9 +55,9 @@
 
 <meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Angels-D" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end --><link rel="alternate" href="/atom.xml" title="Angels-D" type="application/atom+xml">
-</head>
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -201,7 +201,7 @@
 
      
         <!-- 页面整体效果 -->
-<style type="text/css" lang="css">
+<style type="text/css" lang="css" importance="high">
     #loading-container {
         position: fixed;
         top: 0;
@@ -226,24 +226,30 @@
         filter: alpha(opacity=0);
     }
 </style>
-<script>
-    (function () {
-        const loaded = function () {
-            setTimeout(function () {
-                const loader = document.getElementById("loading-container");
-                loader.className = "fade-out"; //使用渐隐的方法淡出loading page 
-                // document.getElementById("body-wrap").style.display="flex"; 
-                setTimeout(function () {
-                    loader.style.display = "none";
-                }, 2500);
-            }, 700); //强制显示loading page 700ms
-        };
-        loaded();
-    })()
+<script importance="high">
+    // (function () {
+    //     const loaded = function () {
+    //         setTimeout(function () {
+    //             const loader = document.getElementById("loading-container");
+    //             loader.className = "fade-out"; //使用渐隐的方法淡出loading page 
+    //             // document.getElementById("body-wrap").style.display="flex"; 
+    //             setTimeout(function () {
+    //                 loader.style.display = "none";
+    //             }, 2500);
+    //         }, 700); //强制显示loading page 700ms
+    //     };
+    //     loaded();
+    // })()
+    document.onreadystatechange = function () {//即在加载的过程中执行下面的代码
+        console.log(document.readyState)
+        if(document.readyState=="complete"){//complete加载完成
+            $("#loading-container").fadeOut(700);
+        }
+    }
 </script>
 
 <!-- 时钟 + 文字 效果 -->
-<style>
+<style importance="high">
     #canvas {
         display: block;
         margin: 5vh auto;
@@ -444,7 +450,7 @@
         }
     }
 </style>
-<script>
+<script importance="high">
         $(function () {
         var canvas = document.getElementById('canvas');
         var ctx = canvas.getContext('2d');
@@ -480,12 +486,12 @@
 
             // Hours
             ctx.beginPath();
-            ctx.arc(100, 100, 85, degToRad(270), degToRad((hours * 30) - 90));
+            ctx.arc(100, 100, 85, degToRad(270), degToRad((hours * 30 + minutes/2 + newSeconds/120) - 90));
             ctx.stroke();
 
             // Minutes
             ctx.beginPath();
-            ctx.arc(100, 100, 70, degToRad(270), degToRad((minutes * 6) - 90));
+            ctx.arc(100, 100, 70, degToRad(270), degToRad((minutes * 6 + newSeconds/10) - 90));
             ctx.stroke();
             // Seconds
             ctx.beginPath();
@@ -505,7 +511,7 @@
         setInterval(renderTime, 20);
     });
 </script>
-<div id="loading-container">
+<div id="loading-container" importance="high">
     <canvas id="canvas" width="200" height="200"></canvas>
     <div id="load">
         <div>G</div>
@@ -1127,52 +1133,6 @@
         
             
             <div class="carousel-item amber white-text carousel-post bg-cover"
-                 style="background-image: url('https://fastly.jsdelivr.net/gh/Angels-D/Angels-D.github.io/medias/featureimages/0.jpg');">
-                <div class="container">
-                    <div class="row">
-                        <div class="col s10 offset-s1">
-                            <div class="title center-align">人工智能 学习笔记</div>
-                            <div class="description center-align">
-                                
-                                    作者学习人工智能的笔记(未完结)
-                                
-                            </div>
-                            <div class="cover-btns">
-                                <a href="/2021/08/06/ren-gong-zhi-neng-xue-xi-bi-ji/" class="waves-effect waves-light btn"
-                                   target="_blank">
-                                    <i class="icon fa fa-eye fa-fw"></i>阅读更多
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-            
-            <div class="carousel-item amber white-text carousel-post bg-cover"
-                 style="background-image: url('https://fastly.jsdelivr.net/gh/Angels-D/Angels-D.github.io/medias/featureimages/3.jpg');">
-                <div class="container">
-                    <div class="row">
-                        <div class="col s10 offset-s1">
-                            <div class="title center-align">算法与数据结构 笔记</div>
-                            <div class="description center-align">
-                                
-                                    作者学习算法与数据结构的笔记(未完结)
-                                
-                            </div>
-                            <div class="cover-btns">
-                                <a href="/2021/09/30/suan-fa-yu-shu-ju-jie-gou-bi-ji/" class="waves-effect waves-light btn"
-                                   target="_blank">
-                                    <i class="icon fa fa-eye fa-fw"></i>阅读更多
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-            
-            <div class="carousel-item amber white-text carousel-post bg-cover"
                  style="background-image: url('https://fastly.jsdelivr.net/gh/Angels-D/Angels-D.github.io/medias/featureimages/7.jpg');">
                 <div class="container">
                     <div class="row">
@@ -1196,6 +1156,29 @@
         
             
             <div class="carousel-item amber white-text carousel-post bg-cover"
+                 style="background-image: url('https://fastly.jsdelivr.net/gh/Angels-D/Angels-D.github.io/medias/featureimages/0.jpg');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s10 offset-s1">
+                            <div class="title center-align">人工智能 学习笔记</div>
+                            <div class="description center-align">
+                                
+                                    作者学习人工智能的笔记(未完结)
+                                
+                            </div>
+                            <div class="cover-btns">
+                                <a href="/2021/08/06/ren-gong-zhi-neng-xue-xi-bi-ji/" class="waves-effect waves-light btn"
+                                   target="_blank">
+                                    <i class="icon fa fa-eye fa-fw"></i>阅读更多
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            
+            <div class="carousel-item amber white-text carousel-post bg-cover"
                  style="background-image: url('https://fastly.jsdelivr.net/gh/Angels-D/Angels-D.github.io/medias/featureimages/5.jpg');">
                 <div class="container">
                     <div class="row">
@@ -1208,6 +1191,29 @@
                             </div>
                             <div class="cover-btns">
                                 <a href="/2021/07/10/lan-qiao-bei-pi-ya-nuo-qu-xian/" class="waves-effect waves-light btn"
+                                   target="_blank">
+                                    <i class="icon fa fa-eye fa-fw"></i>阅读更多
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            
+            <div class="carousel-item amber white-text carousel-post bg-cover"
+                 style="background-image: url('https://fastly.jsdelivr.net/gh/Angels-D/Angels-D.github.io/medias/featureimages/3.jpg');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s10 offset-s1">
+                            <div class="title center-align">算法与数据结构 笔记</div>
+                            <div class="description center-align">
+                                
+                                    作者学习算法与数据结构的笔记(未完结)
+                                
+                            </div>
+                            <div class="cover-btns">
+                                <a href="/2021/09/30/suan-fa-yu-shu-ju-jie-gou-bi-ji/" class="waves-effect waves-light btn"
                                    target="_blank">
                                     <i class="icon fa fa-eye fa-fw"></i>阅读更多
                                 </a>
@@ -1425,34 +1431,6 @@
     
     <div class="col s12 m6" >
         
-            <div class="post-card" style="background-image: url('https://fastly.jsdelivr.net/gh/Angels-D/Angels-D.github.io/medias/featureimages/19.jpg')">
-            
-            <div class="post-body">
-                <div class="post-categories">
-                    
-                        
-                            <a href="/categories/%E7%BD%91%E7%BB%9C/" class="category">网络</a>
-                        
-                    
-                </div>
-                <a href="/2021/10/24/nginx-fan-xiang-dai-li/">
-                    <h3 class="post-title">Nginx代理</h3>
-                </a>
-                <p class="post-description">
-                    
-                        使用Nginx搭建Web服务器，并反向代理Web项目
-                    
-                </p>
-                <a href="/2021/10/24/nginx-fan-xiang-dai-li/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #EF4DB6 0%, #C643FC 100%)" target="_blank">
-                    <i class="icon far fa-eye fa-fw"></i>阅读更多
-                </a>
-            </div>
-        </div>
-    </div>
-    
-    
-    <div class="col s12 m6" data-aos="zoom-in-up">
-        
             <div class="post-card" style="background-image: url('https://fastly.jsdelivr.net/gh/Angels-D/Angels-D.github.io/medias/featureimages/8.jpg')">
             
             <div class="post-body">
@@ -1471,7 +1449,35 @@
                         在华为OpenEuler配置双节点Hadoop
                     
                 </p>
-                <a href="/2021/09/24/openeuler-hadoop-an-zhuang-pei-zhi/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #1AD6FD 0%, #1D62F0 100%)" target="_blank">
+                <a href="/2021/09/24/openeuler-hadoop-an-zhuang-pei-zhi/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #EF4DB6 0%, #C643FC 100%)" target="_blank">
+                    <i class="icon far fa-eye fa-fw"></i>阅读更多
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="col s12 m6" data-aos="zoom-in-up">
+        
+            <div class="post-card" style="background-image: url('https://fastly.jsdelivr.net/gh/Angels-D/Angels-D.github.io/medias/featureimages/19.jpg')">
+            
+            <div class="post-body">
+                <div class="post-categories">
+                    
+                        
+                            <a href="/categories/%E7%BD%91%E7%BB%9C/" class="category">网络</a>
+                        
+                    
+                </div>
+                <a href="/2021/10/24/nginx-fan-xiang-dai-li/">
+                    <h3 class="post-title">Nginx代理</h3>
+                </a>
+                <p class="post-description">
+                    
+                        使用Nginx搭建Web服务器，并反向代理Web项目
+                    
+                </p>
+                <a href="/2021/10/24/nginx-fan-xiang-dai-li/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #1AD6FD 0%, #1D62F0 100%)" target="_blank">
                     <i class="icon far fa-eye fa-fw"></i>阅读更多
                 </a>
             </div>
@@ -2754,12 +2760,12 @@ $(function () {
     document.body.addEventListener('input', POWERMODE);
   </script>
 
-<script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true,"react":{"opacity":0.7}}});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --><script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 preloadRatio: 1,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true,"react":{"opacity":0.7}}});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>
